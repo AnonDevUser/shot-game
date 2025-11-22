@@ -1,0 +1,160 @@
+/* 
+  © 2025 StuClub. All rights reserved.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #111;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .left-panel,
+  .right-panel {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .left-panel {
+    background-color: #111;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .right-panel h1{
+    font-size: 1.5rem;
+    color:#9ed0f8;
+  }
+  
+  .right-panel {
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+  
+  form label:hover {
+    background-color: #222;
+  }
+  
+  form input[type="radio"] {
+    display: none;
+  }
+  
+  form input[type="radio"]:checked + label {
+    background-color: #9ed0f8;
+    color: black;
+    font-weight: bold;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #9ed0f8;
+    color: black;
+  }
+  
+  .submit-btn:hover {
+    background-color: #7bb8e8;
+  }
+
+  /* Tablet styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    .left-panel,
+    .right-panel {
+      padding: 30px;
+    }
+
+    .tagline {
+      font-size: 1.3rem;
+      line-height: 2rem;
+      margin-bottom: 30px;
+    }
+
+    body {
+      padding: 10px;
+    }
+  }
+
+  /* Mobile styles */
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+
+    .container {
+      border-radius: 15px;
+    }
+
+    .left-panel,
+    .right-panel {
+      padding: 20px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    form label {
+      font-size: 0.9rem;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+
+    .submit-btn {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  }

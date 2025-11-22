@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Result </title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <body> 
+        {% if content %}
+        <div class="container">
+            <div class="left-panel">
+              <img src="{% static 'images/wow.png' %}"  alt="symbol Logo" />
+            </div>
+            <div class="right-panel">
+             <h1> correct </h1>
+                <form action="{% url 'Index' %}" method="get">
+                    {% csrf_token %}
+                    <button type="submit" class="submit-btn">Next</button>
+                </form>
+            </div>
+        </div>
+        {% else %}
+        <div class="container">
+            <div class="left-panel">
+              <img src="{% static 'images/thumb-down.png' %}"  alt="symbol Logo" />
+            </div>
+            <div class="right-panel">
+             <h1> Incorrect </h1>
+             <p class="tagline">take a shot</p>
+                <form action="{% url 'Index' %}" method="get">
+                    {% csrf_token %}
+                    <button type="submit" class="submit-btn">Next</button>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+    </body>
+</head>
+</html>

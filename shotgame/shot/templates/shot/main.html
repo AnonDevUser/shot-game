@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question </title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <body> 
+       
+        {% if question %}
+        <div class="container">
+            <div class="left-panel">
+               <p class="tagline"> {{ question }} </p>
+            </div>
+        <div class="right-panel">
+            <form action="{% url 'SubmitAnswer' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="question_id" value="{{ question_id }}">
+                {% for option in options %}
+                <input type="radio" id="option-{{ forloop.counter0 }}" name="choice" value="{{ forloop.counter0 }}" required>
+                <label for="option-{{ forloop.counter0 }}">  {{ option }}  </label><br>
+                {% endfor %}
+                <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                {% endif %}
+        </div>
+        {% if error %}
+    <p>Error: {{ error }}</p>
+        {% endif %}
+    </div>
+    </body>
+</head>
+</html>
