@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'shotgame.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME', 'test'),
-        'USER': os.getenv('DB_USER', '3xkKqr9abcEuViQ.root'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'TjiP7W9KqFNBvCum'),
-        'HOST': os.getenv('DB_HOST', 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com'),
+        'NAME': os.getenv('DB_NAME', 'YOUR_DB_NAME'),
+        'USER': os.getenv('DB_USER', 'YOUR_DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'YOUR_DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST', 'YOUR_DB_HOST'),
         'PORT': int(os.getenv('DB_PORT', '4000')),
         "OPTIONS": {
             "ssl": {
