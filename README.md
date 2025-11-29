@@ -69,3 +69,9 @@ python manage.py runserver
 ## Usage
 Navigate to the home page to get a random question.
 Select an option and submit your answer.
+
+---
+
+## 🏷️ Tags / Keywords
+
+Django, Python, REST API, Calculus Quiz, Online Quiz, AI-generated Questions, Groq AI, Llama 3, Session-based Scoring, Multiple Choice Quiz, Web App, Learning Platform, Math Practice, Educational App, Interactive Quiz, Backend API, Django REST Framework, Student Learning Tool, Math Learning, High School Math, College Calculus, Web Development Project
