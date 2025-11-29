@@ -9,16 +9,10 @@
 - **Dynamic Question Generation**  
   Uses Groq AI to generate calculus questions with 4 multiple-choice options.
 
-- **Session-Based Users**  
-  Each player is tracked by Django sessions. Scores persist while the session is active and reset after the session expires.
-
-- **Score Tracking**  
-  Increment scores for correct answers and display results in real-time.
-
 - **REST API Endpoints**  
   Provides endpoints for fetching questions and submitting answers:
   - `GET /api/get_question` → Returns a random calculus question with options.
-  - `POST /api/submit_answer` → Validates a submitted answer.
+  - `POST /api/check_answer` → Validates a submitted answer.
 
 - **Front-End Integration**  
   Simple HTML templates render questions, options, and results.
